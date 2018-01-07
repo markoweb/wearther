@@ -1,0 +1,10 @@
+@startuml
+
+node client as "UI client"
+node server as "RESTful service"
+cloud ext as "External Weather service"
+
+client -(0 server : JSON
+server -(0 ext : XML
+
+@enduml

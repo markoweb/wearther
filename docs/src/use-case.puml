@@ -1,0 +1,32 @@
+@startuml
+
+skinparam usecase {
+    BackgroundColor<< Extended >> YellowGreen
+}
+skinparam rectangle {
+    BackgroundColor YellowGreen
+}
+
+actor user as "User"
+usecase search as "search weather\nfor given location"
+usecase result as "see the search results
+--
+Today’s weather information\nis displayed for the search results.\nAt least current temperature."
+
+usecase extendedResult as "More detailed current day information\nand weather predictions for next few days" << Extended >>
+
+user -right-> (search)
+(search) -right-> (result)
+
+(result) <|-- (extendedResult)
+
+rectangle Favourites << Extended >> {
+    usecase save as "save the search as a favourite"
+    usecase show as "see all the favourite searches"
+    usecase delete as "delete favourite search(es)"
+    usecase use as "retrigger the search\nfrom any of the favourites"
+}
+
+user --down--> Favourites
+
+@enduml
