@@ -16,6 +16,8 @@ Application definition.
 
 ## Usage
 
+From the root of the repository:
+
 Run the REST service:
 ```
 cd rest
@@ -27,4 +29,3 @@ Run the frontend part:
 cd frontend
 mvn spring-boot:run -Dserver.port=9000
 ```
-
