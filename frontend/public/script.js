@@ -1,13 +1,31 @@
-$("#search-btn").on("click", function() {
-    var token = $("#search-input").val();
+$("#search-country-input").on("blur", function() {
+    $("#search-city-input").val('');
+    var token = $("#search-country-input").val();
     $.ajax({
-        url: "http://localhost:8080/search",
-        data: {q : token }
+        url: "http://localhost:8080/city",
+        data: {country: token}
     }).done(function(data, textStatus, jqXHR) {
-       $('.temperature').text(data.temperature);
-       $('.description').text(data.description);
+        $("#search-city-input").autocomplete({
+            source: data,
+            delay: 0,
+            minLength: 0
+        });
     }).fail(function(jqXHR, textStatus, errorThrown) {
-        $('.temperature').text("");
-        $('.description').text(textStatus);
+        $('#search-city-input').autocomplete({
+            source: {}
+        });
+    });
+});
+
+$("#search-btn").on("click", function() {
+    var country = $("#search-country-input").val();
+    var city = $("#search-city-input").val();
+    $.ajax({
+        url: "http://localhost:8080/weather",
+        data: {country: country, city: city}
+    }).done(function(data, textStatus, jqXHR) {
+        $(".result").text(data)
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+      $('.result').text(textStatus);
     });
 });
