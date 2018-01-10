@@ -1,4 +1,4 @@
-package search;
+package search.city;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
