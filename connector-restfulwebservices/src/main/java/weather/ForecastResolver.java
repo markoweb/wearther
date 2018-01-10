@@ -1,4 +1,4 @@
-package net.webservicex;
+package weather;
 
 import net.restfulwebservices.weather.GetForecastByCity;
 import net.restfulwebservices.weather.GetForecastByCityResponse;
@@ -14,16 +14,16 @@ public class ForecastResolver extends WebServiceGatewaySupport {
 
     private static final Logger log = LoggerFactory.getLogger(ForecastResolver.class);
 
-    public GetForecastByCityResponse getForecast(String contry, String city) {
+    public GetForecastByCityResponse getForecast(String country, String city) {
 
         GetForecastByCity request = new GetForecastByCity();
         QName countryQName = new QName("http://www.restfulwebservices.net/ServiceContracts/2008/01", "Country");
-        request.setCountry(new JAXBElement<>(countryQName, String.class, contry));
+        request.setCountry(new JAXBElement<>(countryQName, String.class, country));
 
         QName cityQName = new QName("http://www.restfulwebservices.net/ServiceContracts/2008/01", "City");
         request.setCity(new JAXBElement<>(cityQName, String.class, city));
 
-        log.info("Requesting forecast for country " + contry + ", city " + city);
+        log.info("Requesting forecast for country " + country + ", city " + city);
 
         return (GetForecastByCityResponse) getWebServiceTemplate()
                 .marshalSendAndReceive("http://www.restfulwebservices.net/wcf/WeatherForecastService.svc",

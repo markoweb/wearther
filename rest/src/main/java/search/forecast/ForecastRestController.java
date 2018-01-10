@@ -1,7 +1,7 @@
 package search.forecast;
 
 import net.restfulwebservices.weather.GetForecastByCityResponse;
-import net.webservicex.ForecastResolver;
+import weather.ForecastResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

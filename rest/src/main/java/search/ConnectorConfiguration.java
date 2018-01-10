@@ -1,7 +1,7 @@
 package search;
 
-import net.webservicex.CityResolver;
-import net.webservicex.ForecastResolver;
+import weather.CityResolver;
+import weather.ForecastResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;

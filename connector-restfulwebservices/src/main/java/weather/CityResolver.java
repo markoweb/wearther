@@ -1,4 +1,4 @@
-package net.webservicex;
+package weather;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

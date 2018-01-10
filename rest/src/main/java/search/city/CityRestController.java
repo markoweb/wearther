@@ -1,7 +1,7 @@
 package search.city;
 
 import net.restfulwebservices.weather.GetCitiesByCountryResponse;
-import net.webservicex.CityResolver;
+import weather.CityResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

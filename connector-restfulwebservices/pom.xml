@@ -10,8 +10,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>connector</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>connector-restfulwebservices</artifactId>
 
     <dependencies>
         <dependency>
