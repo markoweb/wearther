@@ -1,4 +1,4 @@
-package search.forecast;
+package search.restfulwebservices;
 
 import net.restfulwebservices.weather.GetForecastByCityResponse;
 import weather.ForecastResolver;

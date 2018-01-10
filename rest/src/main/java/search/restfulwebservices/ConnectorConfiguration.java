@@ -1,4 +1,4 @@
-package search;
+package search.restfulwebservices;
 
 import weather.CityResolver;
 import weather.ForecastResolver;

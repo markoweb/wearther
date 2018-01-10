@@ -1,4 +1,4 @@
-package search.city;
+package search.restfulwebservices;
 
 import net.restfulwebservices.weather.GetCitiesByCountryResponse;
 import weather.CityResolver;
