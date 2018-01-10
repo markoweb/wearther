@@ -24,7 +24,8 @@
         <module>model</module>
         <module>rest</module>
         <module>frontend</module>
-        <module>connector</module>
+        <module>connector-openweathermap</module>
+        <module>connector-restfulwebservices</module>
     </modules>
 
 </project>
