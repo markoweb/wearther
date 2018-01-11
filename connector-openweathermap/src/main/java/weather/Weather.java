@@ -1,43 +1,36 @@
 package weather;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import javax.xml.bind.annotation.XmlAttribute;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Weather {
 
-    private String id;
-    private String main;
-    private String description;
+    private String number;
+    private String value;
     private String icon;
 
-    public String getId() {
-        return id;
+    public String getNumber() {
+        return number;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    @XmlAttribute
+    public void setNumber(String number) {
+        this.number = number;
     }
 
-    public String getMain() {
-        return main;
+    public String getValue() {
+        return value;
     }
 
-    public void setMain(String main) {
-        this.main = main;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    @XmlAttribute
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public String getIcon() {
         return icon;
     }
 
+    @XmlAttribute
     public void setIcon(String icon) {
         this.icon = icon;
     }
