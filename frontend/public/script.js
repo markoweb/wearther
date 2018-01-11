@@ -2,7 +2,7 @@ $("#search-country-input").on("blur", function() {
     $("#search-city-input").val('');
     var token = $("#search-country-input").val();
     $.ajax({
-        url: "http://localhost:8080/city",
+        url: "http://localhost:8080/rws/city",
         data: {country: token}
     }).done(function(data, textStatus, jqXHR) {
         $("#search-city-input").autocomplete({
@@ -21,7 +21,7 @@ $("#search-btn").on("click", function() {
     var country = $("#search-country-input").val();
     var city = $("#search-city-input").val();
     $.ajax({
-        url: "http://localhost:8080/weather",
+        url: "http://localhost:8080/rws/weather",
         data: {country: country, city: city}
     }).done(function(data, textStatus, jqXHR) {
         $(".result").text(data)
