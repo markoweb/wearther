@@ -15,12 +15,12 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>model</artifactId>
+            <artifactId>connector-restfulwebservices</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>connector</artifactId>
+            <artifactId>connector-openweathermap</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
