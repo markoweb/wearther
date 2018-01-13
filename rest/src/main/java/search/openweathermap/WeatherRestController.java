@@ -29,9 +29,6 @@ public class WeatherRestController {
         String productionUrl
                 = "http://api.openweathermap.org/data/2.5/weather?q={token}&mode=xml&units=metric&APPID={apikey}";
 
-        log.info("api key: " + this.apiKey);
-        log.info("api isSample: " + this.isSample);
-
         RestTemplate template = new RestTemplate();
         return template.getForObject(
                 ("true".equals(this.isSample)) ? sampleUrl : productionUrl,

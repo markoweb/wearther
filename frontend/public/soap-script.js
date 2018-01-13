@@ -29,3 +29,4 @@ $("#search-btn").on("click", function() {
       $('.result').text(textStatus);
     });
 });
+
