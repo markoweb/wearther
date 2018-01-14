@@ -25,6 +25,7 @@
         <module>frontend</module>
         <module>connector-openweathermap</module>
         <module>connector-restfulwebservices</module>
+        <module>model</module>
     </modules>
 
 </project>
