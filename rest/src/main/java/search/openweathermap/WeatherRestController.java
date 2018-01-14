@@ -1,8 +1,6 @@
 package search.openweathermap;
 
 import org.openweathermap.CurrentType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -10,8 +8,6 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/owm/weather")
 public class WeatherRestController {
-
-    private static final Logger log = LoggerFactory.getLogger(WeatherRestController.class);
 
     @Value("${openweathermap.key}")
     private String apiKey;
