@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Weather from RESTful source</title>
 </head>
-<body>
+<body style="padding-top: 70px">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -30,13 +30,22 @@
 </nav>
 
 <main role="main" class="container">
-    <div class="jumbotron" style="margin-top:100px">
-        <h2>Search</h2>
-        <form class="form-inline">
-            <label for="search-input" class="sr-only">Enter city:</label>
-            <input type="search" class="form-control mb-2 mr-sm-2" id="search-input" placeholder="Enter city">
-            <button type="button" class="btn btn-primary mb-2" id="search-btn">Search</button>
-        </form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h2>Search</h2>
+                <form class="form-inline">
+                    <label for="search-input" class="sr-only">Enter city:</label>
+                    <input type="search" class="form-control mb-2 mr-sm-2" id="search-input" placeholder="Enter city">
+                    <button type="button" class="btn btn-primary mb-2" id="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="jumbotron favourites-wrapper">
+                <h3>Favourites</h3>
+            </div>
+        </div>
     </div>
     <div class="jumbotron">
         <h2 style="margin-bottom: 40px">Results</h2>
